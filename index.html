@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NotePad</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/7ffed4de38.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <video
+      src="media/pexels_videos_2759484 (1080p).mp4"
+      type="video/mp4"
+      class="backgroundVedio"
+      loop
+      autoplay
+    ></video>
+    <div class="container">
+      <video src="media/particles.mp4" muted="" loop autoplay></video>
+      <section>
+        <h2>
+          <span>🖊️</span>
+          <span>N</span>
+          <span>o</span>
+          <span>t</span>
+          <span>e</span>
+          <span>🎨</span>
+          <span>D</span>
+          <span>r</span>
+          <span>o</span>
+          <span>w</span>
+          <span>!</span>
+          <span>!</span>
+          <span>🖊️</span>
+        </h2>
+      </section>
+
+      <div class="music">
+        <div class="music-player">
+          <audio id="song">
+            <source src="media/alan.mp3" type="audio/mpeg" />
+          </audio>
+          <input type="range" value="0" id="progress" />
+          <div class="controls">
+            <div>
+              <i class="fa-solid fa-backward"></i>
+            </div>
+            <div onclick="playPause()">
+              <i class="fa-solid fa-play" id="ctrlIcon"></i>
+            </div>
+            <div>
+              <i class="fa-solid fa-forward"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h4>For Drow Click this</h4>
+      <span class="gun">▄︻デ══━一💨</span>
+      <label class="switch">
+        <input type="checkbox" id="sliderBtn" />
+        <span class="slider round"></span>
+      </label>
+
+      <div class="input-group">
+        <input
+          type="text"
+          autocomplete="off"
+          class="newColor-input"
+          placeholder="🎨Choose Background Color..."
+        />
+
+        <input type="submit" value="Change" class="btn" />
+      </div>
+
+      <br />
+
+      <div class="textContainer">
+        <textarea
+          name=""
+          id="myTextarea"
+          cols="50"
+          rows="20"
+          placeholder="Start typing here ..."
+        ></textarea>
+      </div>
+      <div class="nav hidden">
+        <div class="clr" data-clr="#000"></div>
+        <div class="clr" data-clr="red"></div>
+        <div class="clr" data-clr="orange"></div>
+        <div class="clr" data-clr="blue"></div>
+        <div class="clr" data-clr="purple"></div>
+        <div class="clr" data-clr="yellowgreen"></div>
+        <div class="clr" data-clr="yellow"></div>
+        <div class="clr" data-clr="#fff"></div>
+        <button class="clear">Clear</button>
+        <button class="save">Save</button>
+        <input type="color" id="favcolor" value="#FFFFFF" />
+        <input
+          type="range"
+          name="ageInputName"
+          id="ageInputId"
+          value="5"
+          min="1"
+          max="10"
+          oninput="ageOutputId.value = ageInputId.value"
+        />
+        <output id="ageOutputId">5</output>
+        <div class="emoji">🎨</div>
+      </div>
+
+      <canvas id="canvas" class="hidden"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
